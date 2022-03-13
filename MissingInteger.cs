@@ -9,14 +9,13 @@ using System.Linq;
 
 class Solution {
     public int solution(int[] A) {
-        var result = 1;
-        var hashSet = new HashSet<int>();
         Array.Sort(A);
-
+        
+        var hashSet = new HashSet<int>();
         var max = A[A.Length - 1];
 
         if (max < 1)
-            return result;
+            return 1;
 
         for(int i = 0; i <= A.Length - 1; i++)
         {
